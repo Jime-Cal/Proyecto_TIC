@@ -49,7 +49,7 @@ Una configuración precisa es fundamental para la validez de cualquier evaluaci�
 
   - **Imagen Base:** La imagen `themoviedb:latest` (tamaño **74.3MB**) se construyó a partir de un `Dockerfile` que primero utiliza `node:18` para construir la aplicación y luego `nginx:alpine` para servirla. Esto indica que la API MovieDB es probablemente una aplicación web o API Node.js servida con Nginx.
     ![Docker Images](imagenes/dockerImages.png)
-    ![Docker Images](imagenes/Dockerfile.png)
+    ![Docker Images](imagenes/DockerFile.png)
 
   - **Recursos Asignados al Contenedor (si se limitaron):** Se indica un límite de memoria de **7.463GiB**, aunque el uso actual es muy bajo (**14.8MiB**). No se muestra un límite de CPU explícito.
     ![Docker Images](imagenes/DockerStats.png)
