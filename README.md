@@ -21,6 +21,7 @@ Una configuración precisa es fundamental para la validez de cualquier evaluaci�
     ![Docker Images](imagenes/MiCompuCPU.png)
 
   - **Memoria RAM:** Tiene **16 GB** de RAM instalada (2 slots de 8 GB cada uno a 3200 MT/s), con **11.7 GB** en uso en el momento de la captura.
+  
     ![Docker Images](imagenes/MiCompuMemory.png)
 
   - **Sistema Operativo:** La Imagen 1 muestra que estás utilizando **Windows 11 Home**, **versión 24H2**.
