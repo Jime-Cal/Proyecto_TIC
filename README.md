@@ -17,18 +17,22 @@ Una configuración precisa es fundamental para la validez de cualquier evaluaci�
 - **Máquina Host (Tu Computadora):**
 
   - **Procesador (CPU):** La CPU tiene una **velocidad base de 2.00 GHz**, **8 núcleos** y **16 procesadores lógicos**.
+   
     ![Docker Images](imagenes/MiCompuCPU.png)
 
   - **Memoria RAM:** Tiene **16 GB** de RAM instalada (2 slots de 8 GB cada uno a 3200 MT/s), con **11.7 GB** en uso en el momento de la captura.
     ![Docker Images](imagenes/MiCompuMemory.png)
 
   - **Sistema Operativo:** La Imagen 1 muestra que estás utilizando **Windows 11 Home**, **versión 24H2**.
+    
     ![Docker Images](imagenes/MiCompuInfo.png)
 
   - **Versión de VirtualBox:** La Imagen 2 indica que estás utilizando **VirtualBox Versión 7.1.8 r168469**.
+    
     ![Docker Images](imagenes/VMVersion.png)
 
   - **Versión de Docker:** La Imagen 3 muestra que la versión de Docker instalada es **Docker version 28.1.1, build 4eba377**.
+    
     ![Docker Images](imagenes/DockerVersion.png)
 
 ---
