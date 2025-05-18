@@ -1,15 +1,3 @@
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y curl
-
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-
-node -v
-npm -v
-
-sudo apt install git
-
-git clone url
-
 # Proyecto de Evaluación Comparativa de Rendimiento: VM vs Docker - Análisis Detallado
 
 ## Introducción
