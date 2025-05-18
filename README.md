@@ -73,7 +73,7 @@ Para llevar a cabo una comparación, es fundamental definir cómo se midieron la
 
     * **Espacio en Disco Requerido:**
       * **VM:** Se utilizaron `du -sh` para el espacio de la API y `df -h` para el uso general del disco.
-        ![Docker Images](imagenes/Du-Sh.png)
+        ![Docker Images](imagenes/Du-sh.png)
         ![Docker Images](imagenes/Df-hVM.png)
 
       * **Docker:** Se utilizaron `docker system df` y `docker images` para el espacio de la imagen y el contenedor.
