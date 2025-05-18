@@ -34,9 +34,11 @@ Una configuración precisa es fundamental para la validez de cualquier evaluaci�
 - **Contenedor Docker:**
   - **Imagen Base:**
     Con el comando `docker images` revela que la imagen utilizada es `themoviedb:latest`, con un tamaño de **74.3MB**. Sin el `Dockerfile`, podemos inferir que se trata de una imagen optimizada que contiene el código de la API MovieDB y las dependencias mínimas necesarias para su ejecución. Dada la naturaleza de una API, podría estar basada en un entorno de ejecución como **Node.js** o **Python** con un servidor web ligero.
+
     ![Docker Images](imagenes/dockerImages.png)
   - **Recursos Asignados al Contenedor (si se limitaron):** Se indican un límite de memoria de **7.463GiB**, aunque el uso actual es mucho menor (**14.8MiB**). No se muestra un límite de CPU explícito, lo que sugiere que el contenedor puede utilizar la CPU disponible del host.
-    ![Docker Images](imagenes/DockerStats.png)
+  
+   ![Docker Images](imagenes/DockerStats.png)
   - **Configuración de Red:** La captura de la interfaz de Portainer (mostrando los detalles del contenedor `jovial_driscoll`) sugiere que la API es accesible en el puerto `8080` dentro del contenedor, y este puerto está mapeado al puerto `8080` del host (`8080:80`). Esto permite acceder a la API desde el host a través de `http://localhost:8080/`.
 
 ## Metodología Detallada y Herramientas Utilizadas
@@ -48,9 +50,11 @@ Para llevar a cabo una comparación buena, es fundamental definir cómo se midie
     - **Uso de la CPU:**
 
       - **VM:** Se utilizó la herramienta `htop` dentro de la maquina virtual para monitorizar el uso de CPU por procesos en tiempo real. Se registraron valores promedio y máximos de la utilización general de la CPU y del proceso de la API MovieDB durante períodos de inactividad y bajo carga.
+
         ![Htop](imagenes/VMHtop.png)
 
       - **Docker:** Se utilizaron las estadísticas proporcionadas por Docker a través de la interfaz de Portainer (vista en la captura mostrando gráficos de uso de CPU, memoria, disco y red para el contenedor `jovial_driscoll`) y la salida del comando `docker stats` (vista en la captura mostrando las estadísticas del contenedor `jovial_driscoll` en formato de tabla). Estas herramientas muestran el porcentaje de CPU utilizado por el contenedor en relación con la capacidad total del host. Se registraron valores similares a los de la VM para la comparación bajo diferentes cargas.
+       
         ![Htop](imagenes/DockerStats.png)
 
     - **Consumo de Memoria (RAM):**
@@ -104,7 +108,7 @@ En esta sección, se presentarán los resultados concretos obtenidos para cada m
 | CPU (Bajo Carga)       | (Valor %)                  | (Valor %)                                                                           |
 | RAM (Inactivo)         | 1.4GiB (`free -h`) ![VM](imagenes/FreeRAM.png) | 14.8MiB (Captura Docker Stats/Portainer)                                            |
 | RAM (Bajo Carga)       | (Valor MB/GB)              | (Valor MB/GB)                                                                       |
-| Espacio en Disco (API) | 325MB (`du -sh`) ![VM](imagenes/Du-sh.png)  | 74.3MB (Imagen) + 81.92kB (Contenedor) ( `docker system df`/`docker images`) ![VM](imagenes/DockersystemDf.png)![VM](imagenes/dockerImages.png) |
+| Espacio en Disco (API) | 325MB (`du -sh`) ![VM](imagenes/Du-sh.png)  | 74.3MB (Imagen) + 81.92kB (Contenedor) ( `docker system df`/`docker images`) ![VM](imagenes/DockerSystemDf.png)![VM](imagenes/dockerImages.png) |
 
 
 
