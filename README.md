@@ -2,13 +2,13 @@
 
 ## Introducción
 
-La virtualización ha revolucionado la forma en que se desarrollan, implementan y gestionan las aplicaciones. Permite la ejecución de múltiples entornos aislados en un solo sistema físico, optimizando el uso de recursos y mejorando la flexibilidad. Dentro del espectro de la virtualización, las **máquinas virtuales (VMs)** y los **contenedores (con Docker como principal exponente)** representan dos enfoques distintos con sus propias ventajas y desventajas.
+La virtualización ha revolucionado la forma en que se desarrollan, implementan y gestionan las aplicaciones. Permite la ejecución de múltiples entornos aislados en un solo sistema físico, optimizando el uso de recursos y mejorando la flexibilidad. Dentro del espectro de la virtualización, las **máquinas virtuales (VMs)** y los **contenedores con Docker** representan dos enfoques distintos con sus propias ventajas y desventajas.
 
-- **Máquinas Virtuales (VMs):** Una máquina virtual emula un hardware físico completo, lo que incluye su propia BIOS, sistema operativo (kernel y espacio de usuario), bibliotecas y aplicaciones. Esta emulación se realiza mediante un hipervisor (como VirtualBox en tu caso), que asigna recursos físicos (CPU, RAM, disco, red) al sistema operativo huésped. El aislamiento entre VMs es robusto, ya que cada una opera con su propio kernel aislado.
+- **Máquinas Virtuales (VMs):** Una máquina virtual emula un hardware físico completo, lo que incluye su propia BIOS, sistema operativo, bibliotecas y aplicaciones. Esta emulación se realiza mediante un hipervisor como VirtualBox, que asigna recursos físicos (CPU, RAM, disco, red) al sistema operativo huésped. El aislamiento entre VMs es robusto, ya que cada una opera con su propio kernel aislado.
 
-- **Contenedores (Docker):** Los contenedores, por otro lado, son una forma de virtualización a nivel del sistema operativo. Un contenedor empaqueta una aplicación y todas sus dependencias necesarias para ejecutarse (bibliotecas, binarios, archivos de configuración), pero comparte el kernel del sistema operativo del host. El aislamiento se logra mediante mecanismos del kernel como namespaces (para aislar procesos, redes, sistemas de archivos, etc.) y cgroups (para limitar el uso de recursos). Esta compartición del kernel hace que los contenedores sean mucho más ligeros y rápidos de iniciar que las VMs.
+- **Contenedores (Docker):** Los contenedores, por otro lado, son una forma de virtualización a nivel del sistema operativo. Un contenedor empaqueta una aplicación y todas sus dependencias necesarias para ejecutarse, pero comparte el kernel del sistema operativo del host. El aislamiento se logra mediante mecanismos del kernel como namespaces (para aislar procesos, redes, sistemas de archivos, etc.) y cgroups (para limitar el uso de recursos). Esta compartición del kernel hace que los contenedores sean mucho más ligeros y rápidos de iniciar que las VMs.
 
-Tu proyecto se centra en comparar el rendimiento y el uso de recursos al ejecutar la **API MovieDB** tanto en una máquina virtual gestionada por VirtualBox como en un contenedor Docker. El objetivo es cuantificar las diferencias en varias métricas clave para determinar cuál de estas tecnologías es más adecuada para este tipo de aplicación, considerando factores como la eficiencia, el rendimiento, la seguridad y la portabilidad.
+El proyecto se centra en comparar el rendimiento y el uso de recursos al ejecutar la **API MovieDB** tanto en una máquina virtual gestionada por VirtualBox como en un contenedor Docker. El objetivo es cuantificar las diferencias en varias métricas clave para determinar cuál de estas tecnologías es más adecuada para este tipo de aplicación, considerando factores como la eficiencia, el rendimiento, la seguridad y la portabilidad.
 
 ## Configuración Detallada del Entorno de Prueba
 
@@ -24,15 +24,15 @@ Una configuración precisa es fundamental para la validez de cualquier evaluaci�
   
     ![Docker Images](imagenes/MiCompuMemory.png)
 
-  - **Sistema Operativo:** La Imagen 1 muestra que estás utilizando **Windows 11 Home**, **versión 24H2**.
+  - **Sistema Operativo:** Se esta utilizando **Windows 11 Home**, **versión 24H2**.
     
     ![Docker Images](imagenes/MiCompuInfo.png)
 
-  - **Versión de VirtualBox:** La Imagen 2 indica que estás utilizando **VirtualBox Versión 7.1.8 r168469**.
+  - **Versión de VirtualBox:** Se esta utilizando **VirtualBox Versión 7.1.8 r168469**.
     
     ![Docker Images](imagenes/VMVersion.png)
 
-  - **Versión de Docker:** La Imagen 3 muestra que la versión de Docker instalada es **Docker version 28.1.1, build 4eba377**.
+  - **Versión de Docker:** La versión de Docker instalada es **Docker version 28.1.1, build 4eba377**.
     
     ![Docker Images](imagenes/DockerVersion.png)
 
@@ -120,6 +120,8 @@ En esta sección, se presentarán los resultados concretos obtenidos para cada m
 | CPU (Inactivo)          | (Valor %)                           | 0.00%                             |
 | RAM (Inactivo)          | 1.4GiB                              | 14.8MiB                           |
 | Espacio en Disco (API)  | 325MB                               | 74.4MB                           |
+
+----
 
 | Entorno                   | Tiempo (segundos) |
 | ------------------------- | ----------------- |
